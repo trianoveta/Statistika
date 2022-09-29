@@ -1,0 +1,24 @@
+data_veta = read.csv("C:/Users/Veta/Downloads/houseprices.csv")
+View(data_veta)
+veta <- data_veta[data_veta$Bedrooms==2,]  
+View(veta)
+veta$Bathrooms <- ifelse(veta$Bathrooms > 2, c("large"), c("small"))
+View(veta)
+veta$newvariable <- ifelse(veta$Offers > 2, c("large"), c("small")) 
+View(veta)
+veta$newvariable <- veta$Price/veta$SqFt
+View(veta)
+veta$newvariable<-NULL
+View(veta)
+data_veta.kolom1dan2 <- data_veta[,1:2]
+View(data_veta.kolom1dan2)
+data_veta.kolom3dan4 <- data_veta[,3:4]
+View(data_veta.kolom3dan4)
+data_veta.kolom1sd4<-cbind(data_veta.kolom1dan2, data_veta.kolom3dan4) 
+View(data_veta.kolom1sd4)
+data_veta.baris1sd3 <- data_veta[1:3,]
+data_veta.baris4sd6 <- data_veta[4:6,] 
+data_veta.baris1sd6 <- rbind(data_veta.baris1sd3, data_veta.baris4sd6) 
+View(data_veta.baris1sd6)
+data_veta.sort<-data_veta[order(data_veta$Price),] 
+View(data_veta.sort)
