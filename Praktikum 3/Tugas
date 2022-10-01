@@ -1,0 +1,22 @@
+data_veta = read.csv("C:/Users/Veta/Downloads/data.csv")
+View(data_veta)
+veta <- data_veta[4]
+View(veta)
+veta$Tinggi.Badan <- ifelse(veta$Tinggi.Badan > 160, c("Tinggi"), c("Pendek"))
+View(veta)
+veta$Jurusan <- "Infor 21"
+View(veta)
+veta$Fakultas <- "FTI"
+View(veta)
+veta$Fakultas<-NULL
+View(veta)
+data_veta.kolom<- cbind(data_veta.kolom1dan2,data_veta.kolom3dan4)
+View(data_veta.kolom)
+data_veta.baris1sd5<- data_veta[1:5,]
+View(data_veta.baris1sd5)
+data_veta.baris25sd30<- data_veta[25:30,]
+View(data_veta.baris25sd30)
+data_veta.baris<- rbind(data_veta.baris1sd5,data_veta.baris25sd30)
+View(data_veta.baris)
+data_veta.sort <- data_veta[order(data_veta$Waktu.Perjalanan),]
+View(data_veta.sort)
