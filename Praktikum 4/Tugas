@@ -1,0 +1,4 @@
+data=read.delim("clipboard")
+View(data)
+
+t.test(data$Volume, conf.level = 0.5)
