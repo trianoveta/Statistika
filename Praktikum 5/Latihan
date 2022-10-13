@@ -1,0 +1,5 @@
+data=read.delim("clipboard")
+View(data)
+str(data)
+mean(data$Volume)
+t.test(data$Volume, mu=10)
