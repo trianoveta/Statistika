@@ -1,0 +1,10 @@
+data_Veta=read.delim("clipboard")
+View(data_Veta)
+hist(data_Veta$AmountSpent)
+d=density(data_Veta$AmountSpent)
+plot(d)
+
+data_Veta=read.delim("clipboard")
+View(data_Veta)
+qplot(data_Veta$Price, data_Veta$SqFt)
+plot(data_Veta$Price, data_Veta$SqFt)
