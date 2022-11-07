@@ -1,0 +1,4 @@
+import pandas as pd
+
+data_nama = pd.read_csv('D:/dll/titanic.csv')
+print(data_nama)
