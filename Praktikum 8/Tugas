@@ -1,0 +1,16 @@
+#Scatter Plot Harga Rumah Berdasarkan Bedrooms
+col_list=['Price', 'Bedrooms']
+numhouse = data_veta[data_veta.columns[data_veta.columns.isin(col_list)]]
+numhouse.plot.scatter(x='Bedrooms', y='Price')
+
+#Scatter Plot Harga Rumah berdasarkan Bathrooms!
+col_list=['Price', 'Bathrooms']
+numhouse = data_veta[data_veta.columns[data_veta.columns.isin(col_list)]]
+numhouse.plot.scatter(x='Price', y='Bathrooms')
+
+#Grouped Boxplot berdasarkan Bathrooms dengan Price sebagai perbandingannya!
+col_list=['Price', 'Bathrooms']
+numhouse = data_veta[data_veta.columns[data_veta.columns.isin(col_list)]]
+plt.figure(figsize=(15,5))
+numhouse.boxplot(by='Bathrooms')
+plt.show()
