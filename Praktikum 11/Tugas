@@ -1,0 +1,8 @@
+df_tria=PlantGrowth
+View(df_tria)
+
+model <- aov(df_tria$weight~df_tria$group)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
