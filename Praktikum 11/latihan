@@ -1,0 +1,8 @@
+df_veta = read.delim("clipboard")
+View(df_veta)
+
+model <- aov(korosi~metode, data=df_veta)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
