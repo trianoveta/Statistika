@@ -1,0 +1,5 @@
+#persamaan regresi untuk menduga penjualan mingguan (Y) berdasarkan pengeluaran iklan (X)
+df_veta=read.delim("clipboard")
+head(df_veta)
+model_reg=lm(df_veta$y~df_veta$x)
+summary(model_reg)
