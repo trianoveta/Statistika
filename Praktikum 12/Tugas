@@ -1,0 +1,11 @@
+#Regresi Berganda
+df_veta=read.delim("clipboard")
+df_veta$brick_dummy <- ifelse(df_veta$Brick == "Yes", 1,0)
+df_veta$N_dummy1 <- ifelse(df_veta$Neighborhood =="West", 1,0)
+df_veta$N_dummy2 <- ifelse(df_veta$Neighborhood =="North", 1,0)
+model=lm(df_veta$Price~df_veta$SqFt+df_veta$Bedrooms+df_veta$Bathrooms+df_veta$brick_dummy+df_veta$N_dummy1+df_veta$N_dummy2)
+summary(model)
+
+#Menampilkan rata rata harga perbagian
+by(df_veta$Price, df_veta$Neighborhood, mean)
+by(df_veta$Price, df_veta$Brick, mean)
