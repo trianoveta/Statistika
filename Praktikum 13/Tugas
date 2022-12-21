@@ -1,0 +1,10 @@
+df_veta=read.delim("clipboard")
+wilcox.test(df_veta$Ganjil,df_veta$Genap,paired=TRUE)
+
+df_veta = read.delim("clipboard")
+#independent 2-group Mann-Whitney U Test
+wilcox.test(df_veta$caffeine,df_veta$placebo,paired=TRUE)
+#where is numeric and A is A binary factor
+head(df_veta)
+rank(df_veta$caffeine)
+rank(df_veta$placebo)
