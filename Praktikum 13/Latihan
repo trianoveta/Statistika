@@ -1,0 +1,13 @@
+dataku_veta = read.delim("clipboard")
+wilcox.test(dataku_veta$Sebelum,dataku_veta$Setelah,paired=TRUE)
+
+dataku_veta = read.delim("clipboard")
+wilcox.test(dataku_veta$Sebelum,dataku_veta$Sesudah,paired=TRUE)
+
+#berpangkat
+df_tria=read.delim("clipboard")
+# independent 2-group Mann-Whitney U Test
+wilcox.test(df_tria$obat~df_tria$grup)
+# where y is numeric and A is A binary factor
+head(df_tria)
+rank(df_tria$obat)
